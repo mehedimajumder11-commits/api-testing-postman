@@ -1,0 +1,184 @@
+{
+  "info": {
+    "_postman_id": "4a6d7983-ca12-4f96-9071-d2a6aed2eaff",
+    "name": "API Testing Project",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53934657",
+    "_collection_link": "https://go.postman.co/collection/53934657-4a6d7983-ca12-4f96-9071-d2a6aed2eaff?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Create_Customer (Post)",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJtbWhtcDQwQGdtYWlsLmNvbSIsImlhdCI6MTc3NTkzMzE1MSwiZXhwIjoxNzc1OTM2NzUxfQ.9slDQda6Vt0SWDv80Ofj0q81iJx7_zK-su8bBFMrtwQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\":\"mmhmp40@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login (Post)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"mmhmp40@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/customer/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "customer",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Authentication (Get)",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJtbWhtcDQwQGdtYWlsLmNvbSIsImlhdCI6MTc3NjMxNzAxNywiZXhwIjoxNzc2MzIwNjE3fQ.j_gK_WcHvZIRqwsj8UJFmAtneboxwmkV0mlbarqwz8s",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/customer/profile/4",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "customer",
+            "profile",
+            "4"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update_Customer (Put)",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"manforce\",\r\n    \"address\":\"New York\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/customer/update/4",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "customer",
+            "update",
+            "4"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Partial_upadate_customer (Patch)",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"address\":\"Chittagong\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/customer/patch/4",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "customer",
+            "patch",
+            "4"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete_customer (DELETE)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/customer/4",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "customer",
+            "4"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
